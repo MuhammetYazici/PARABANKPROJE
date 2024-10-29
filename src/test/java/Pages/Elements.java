@@ -10,6 +10,27 @@ public class Elements extends Parent{
     public Elements(){
         PageFactory.initElements(GWD.getDriver(),this);
     }
+    // betul locator
+    @FindBy(xpath="//*[text()='Customer Login']")
+    public WebElement customer_login;
+
+    @FindBy(name="username")
+    public WebElement login_username;
+
+    @FindBy(name="password")
+    public WebElement login_password;
+
+    @FindBy(xpath = "//*[@value='Log In']")
+    public WebElement login_button;
+
+    @FindBy(xpath = "//*[text()='Welcome']")
+    public WebElement login_wellcome;
+
+    @FindBy(xpath = "//*[@class='error']")
+    public WebElement login_error;
+
+    @FindBy(xpath="//*[text()='Log Out']")
+    public WebElement Log_Out;
 
     // muhammet locator
     @FindBy(xpath = "//a[text()='Bill Pay']")
@@ -76,10 +97,14 @@ public class Elements extends Parent{
             case "payeAmount": return this.payeAmount;
             case "payeSuccessMessage": return this.payeSuccessMessage;
             case "payefromAcoount": return this.payefromAcoount;
+            //betul
+            case "Username" : return this.login_username;
+            case "Testuser" : return this.login_password;
 
         }
         return null;
     }
+
 
 
 
