@@ -82,8 +82,7 @@ public class Elements extends Parent{
 
         switch (strElementName.trim())
         {
-            //case "Username" : return this.login_username;
-            //case "Testuser" : return this.login_password;
+
             case "billPay"  : return this.billPay;
             case "payeSend" : return this.payeSend;
             case "payeName" : return this.payeName;
